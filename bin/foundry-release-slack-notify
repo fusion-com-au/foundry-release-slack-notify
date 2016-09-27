@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+var FoundryReleaseBase = require('foundry-release-base'),
+    FoundryReleaseCommand = require('../'),
+    pkg = require('../package.json');
+
+
+var program = new FoundryReleaseBase(FoundryReleaseCommand);
+    program.version(pkg.version);
+
+    // Parse CLI arguments
+    program.parse(process.argv);

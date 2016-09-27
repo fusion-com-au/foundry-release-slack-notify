@@ -1,0 +1,50 @@
+{
+  "name": "foundry-release-slack-notify",
+  "version": "0.0.1",
+  "description": "Sends message to a slack channel on publish.",
+  "main": "lib/foundry-release-slack-notify",
+  "scripts": {
+    "release": "foundry release",
+    "release-resume": "foundry resume"
+  },
+  "keywords": [
+    "foundry",
+    "foundry-release",
+    "bower",
+    "release",
+    "publish"
+  ],
+  "author": "Zeno Jiricek <zeno.jiricek@fusion.com.au>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "deep-extend": "^0.4.1",
+    "foundry-release-base": "^1.0.2",
+    "nconf": "^0.8.4",
+    "nunjucks": "^2.5.2",
+    "request": "^2.75.0",
+    "slug": "^0.9.1"
+  },
+  "devDependencies": {
+    "foundry": "^4.0.3",
+    "foundry-release-git": "^2.0.1",
+    "foundry-release-npm": "^2.0.1",
+    "foundry-release-require-branch": "^0.0.2"
+  },
+  "bin": {
+    "foundry-release-slack-notify": "bin/foundry-release-slack-notify"
+  },
+  "foundry": {
+    "releaseCommands": [
+      {
+        "type": "releaseCommand",
+        "command": "foundry-release-require-branch",
+        "options": {
+          "branchName": "master"
+        }
+      },
+      "foundry-release-git",
+      "foundry-release-npm"
+    ]
+  }
+}
