@@ -43,6 +43,16 @@
           "branchName": "master"
         }
       },
+      {
+        "type": "customCommand",
+        "command": "foundry-release-slack-notify",
+        "updateFiles": "node ./bin/foundry-release-slack-notify",
+        "options": {
+          "channel": "#frontend",
+          "webhook": "https://hooks.slack.com/services/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",
+          "text": "<!here> {{npm.package.name}}@{{FOUNDRY.VERSION}} released"
+        }
+      },
       "foundry-release-git",
       "foundry-release-npm"
     ]
