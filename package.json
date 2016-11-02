@@ -49,7 +49,7 @@
         "updateFiles": "node ./bin/foundry-release-slack-notify",
         "options": {
           "channel": "#frontend",
-          "webhook": "https://hooks.slack.com/services/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",
+          "webhook": "https://hooks.slack.com/services/{{FOUNDRY.SLACK.ENDPOINT}}",
           "text": "<!here> {{npm.package.name}}@{{FOUNDRY.VERSION}} released"
         }
       },
