@@ -1,6 +1,6 @@
 {
   "name": "foundry-release-slack-notify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Sends message to a slack channel on publish.",
   "main": "lib/foundry-release-slack-notify",
   "scripts": {
